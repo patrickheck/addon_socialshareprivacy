@@ -1,0 +1,41 @@
+1.1 - 2011-11-16
+
+* Added a helper SocialSharePrivacyHelper that can add Social Buttons to any template though the 
+  renderSocialButtons() method
+* Fixed a bug where adding of buttons didn't work
+* Added block caching support
+
+1.0.7 - 2011-11-04
+
+* Updated socialshareprivacy jQuery plugin to version 1.3 
+* Removed duplicate javascript
+
+1.0.6 - 2011-11-04
+
+* Code Cleanup: Replaced all occurences of PHP short tags to comply with code styleguide
+* Added Icons to "add" and "edit" screens
+
+1.0.5 - 2011-11-01
+
+* Added transparency to placeholder images to make them look better on dark backgrounds
+
+1.0.4 - 2011-10-07
+
+* Updated socialshareprivacy jQuery plugin to version 1.2 
+
+1.0.3 - 2011-10-04
+
+* Added scrapbook template
+* Removed Facebook App-ID since it is not required any more
+
+1.0.2 - 2011-10-03
+
+* Fixed a bug where the "i" button and the tooltips were floating above the edit-bar at the top 
+
+1.0.1 - 2011-10-03
+
+* Fixed a bug where the "i" button was floating above everything in edit mode 
+
+1.0 - 2011-10-02
+
+* Initial Release
