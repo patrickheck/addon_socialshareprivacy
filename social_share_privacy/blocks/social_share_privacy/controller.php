@@ -1,4 +1,4 @@
-<?php  
+<?php 
 	/**
 	 * A C5 wrapper wrapper for the jquery socialshareprivacy plugin
 	 * ( http://www.heise.de/extras/socialshareprivacy/ )

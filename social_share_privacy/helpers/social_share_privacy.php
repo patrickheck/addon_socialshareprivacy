@@ -1,4 +1,4 @@
-<?php   defined('C5_EXECUTE') or die("Access Denied.");
+<?php  defined('C5_EXECUTE') or die("Access Denied.");
 
 /**
  * Adds a Social Sharing block
@@ -35,7 +35,7 @@ class SocialSharePrivacyHelper {
 	 * @param string $fBAction Caption to be displayed on Facebook button. Currently either "like" or "recommend"
 	 * @returns bool always returns true
 	 */
-	public function renderSocialButtons($uri="",$showFacebook=true,$showTwitter=true,$showGPlus=true,$fbAction="like") {
+	public function renderSocialButtons($uri="",$showFacebook=true,$showTwitter=true,$showGPlus=true,$fbAction="like",$infoURL="") {
 		$target_id = $this->idPrefix . "-" . uniqid();
 		$args["target_id"] = $target_id;
 		$args["fbStatus"] = $showFacebook?"on":"off";
@@ -43,12 +43,18 @@ class SocialSharePrivacyHelper {
 		$args["gpStatus"] = $showGPlus?"on":"off";
 		$args["fbAction"] = $fbAction;
 		$args["uri"] = $uri;
+		if ($infoURL == "") {
+			$infoURL = t("http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html");
+		}
+		$args["infoURL"] = $infoURL;
+		
 		Loader::packageElement('social_buttons', $this->pkgHandle, $args);
 		return true;
 	}
 	
 	/**
 	 * Find the image path for a service placeholder-icon
+	 * This is only actively used in scrapbook code and might be removed from future versions
 	 * 
 	 * @param string $service name of the service to find a button for
 	 * @returns string path to image file

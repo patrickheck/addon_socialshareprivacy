@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
   * This loads the necessary css and js files
   */
@@ -11,6 +11,6 @@ class SocialSharePrivacy {
 		$v = View::getInstance();
 		$v->addHeaderItem($html->css('socialshareprivacy.css',$this->pkgHandle));
 		$v->addHeaderItem($html->css('social_buttons.css',$this->pkgHandle));
-		$v->addHeaderItem($html->javascript('jquery.socialshareprivacy.min.js',$this->pkgHandle));
+		$v->addFooterItem($html->javascript('jquery.socialshareprivacy.min.js',$this->pkgHandle));
 	}
 }

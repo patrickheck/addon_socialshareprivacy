@@ -2,134 +2,148 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Social Share Privacy\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-16 18:19+0100\n"
+"POT-Creation-Date: 2011-12-28 12:51+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Patrick Heck <heckp@gmx.de>\n"
+"Last-Translator: Patrick Heck <patrick@patrickheck.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: t\n"
-"X-Poedit-Basepath: /Users/heckp/Downloads/social_share_privacy\n"
+"X-Poedit-Basepath: C:\\xampp\\htdocs\\C5_kickstart\\packages\\social_share_privacy\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-SearchPath-0: /Users/heckp/Downloads/social_share_privacy\n"
+"X-Poedit-SearchPath-0: C:\\xampp\\htdocs\\C5_kickstart\\packages\\social_share_privacy\n"
 
-#: /Users/heckp/Downloads/social_share_privacy/controller.php:2
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/controller.php:2
 msgid "Access Denied."
 msgstr "Zugriff Verweigert"
 
-#: /Users/heckp/Downloads/social_share_privacy/controller.php:18
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/controller.php:22
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/controller.php:18
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/controller.php:24
 msgid "A social sharing block that protects your privacy"
 msgstr "Ein Block für soziale Netzwerke, der Ihre Privatsphäre schützt"
 
-#: /Users/heckp/Downloads/social_share_privacy/controller.php:22
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/controller.php:26
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/controller.php:22
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/controller.php:28
 msgid "Social Share Privacy"
 msgstr "Social Share Privacy"
 
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:4
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:22
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:4
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:19
 msgid "Facebook"
 msgstr "Facebook"
 
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:5
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:5
 msgid "Show Facebook Button"
 msgstr "Facebook Button anzeigen"
 
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:6
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:15
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:20
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:6
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:15
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:20
 msgid "Yes"
 msgstr "Ja"
 
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:7
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:16
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:21
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:7
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:16
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:21
 msgid "No"
 msgstr "Nein"
 
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:9
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:9
 msgid "Caption"
 msgstr "Beschriftung"
 
 # This describes the caption of the facebook button
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:10
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:10
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:22
 msgid "Like"
 msgstr "Gefällt mir"
 
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:11
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:11
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:22
 msgid "Recommend"
 msgstr "Empfehlen"
 
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:13
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:32
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:13
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:29
 msgid "Twitter"
 msgstr "Twitter"
 
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:14
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:14
 msgid "Show Twitter Button"
 msgstr "Twitter Button anzeigen"
 
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:18
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:41
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:18
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:38
 msgid "Google+"
 msgstr "Google+"
 
-#: /Users/heckp/Downloads/social_share_privacy/blocks/social_share_privacy/edit.php:19
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:19
 msgid "Show Google+ Button"
 msgstr "Google+ Button anzeigen"
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:19
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:23
+msgid "Info Button URL"
+msgstr "Info Button URL"
+
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/blocks/social_share_privacy/edit.php:24
+msgid "This URL will be visited if you click the <em>i</em> button. Leave empty for default."
+msgstr "Diese URL wird aufgerufen, wenn Sie den <em>i</em> Button drücken. Leer lassen für Voreinstellung."
+
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:16
 msgid "2 clicks for increased privacy: Only after clicking here the button will become active and allow connecting to Facebook. Data will already be transferred upon activation &ndash; see <em>i</em>"
 msgstr "2 Klicks f&uuml;r mehr Datenschutz: Erst wenn Sie hier klicken, wird der Button aktiv und Sie k&ouml;nnen Ihre Empfehlung an Facebook senden. Schon beim Aktivieren werden Daten an Dritte &uuml;bertragen &ndash; siehe <em>i</em>"
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:20
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:17
 msgid "not connected to Facebook"
 msgstr "nicht mit Facebook verbunden"
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:21
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:18
 msgid "connected to Facebook"
 msgstr "mit Facebook verbunden"
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:29
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:26
 msgid "2 clicks for increased privacy: Only after clicking here the button will become active and allow connecting to Twitter. Data will already be transferred upon activation &ndash; see <em>i</em>"
 msgstr "2 Klicks f&uuml;r mehr Datenschutz: Erst wenn Sie hier klicken, wird der Button aktiv und Sie k&ouml;nnen Ihre Empfehlung an Twitter senden. Schon beim Aktivieren werden Daten an Dritte &uuml;bertragen &ndash; siehe <em>i</em>"
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:30
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:27
 msgid "not connected to twitter"
 msgstr "nicht mit Twitter verbunden"
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:31
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:28
 msgid "connected to twitter"
 msgstr "mit Twitter verbunden"
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:38
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:31
+msgid "Tweet"
+msgstr "Twittern"
+
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:35
 msgid "2 clicks for increased privacy: Only after clicking here the button will become active and allow connecting to Google+. Data will already be transferred upon activation &ndash; see <em>i</em>"
 msgstr "2 Klicks f&uuml;r mehr Datenschutz: Erst wenn Sie hier klicken, wird der Button aktiv und Sie k&ouml;nnen Ihre Empfehlung an Google+ senden. Schon beim Aktivieren werden Daten an Dritte &uuml;bertragen &ndash; siehe <em>i</em>"
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:39
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:36
 msgid "not connected to google+"
 msgstr "nicht mit Google+ verbunden"
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:40
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:37
 msgid "connected to google+"
 msgstr "mit Google+ verbunden"
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:45
-msgid "http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html"
-msgstr "http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html"
-
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:46
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:43
 msgid "If you activate these buttons, data will be transferred to Facebook, Twitter or Google in the USA. This data might also be stored there. For further information click the <em>i</em> button."
 msgstr "Wenn Sie diese Felder durch einen Klick aktivieren, werden Informationen an Facebook, Twitter oder Google in die USA &uuml;bertragen und unter Umst&auml;nden auch dort gespeichert. N&auml;heres erfahren Sie durch einen Klick auf das <em>i</em>."
 
-#: /Users/heckp/Downloads/social_share_privacy/elements/social_buttons.php:47
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/elements/social_buttons.php:44
 msgid "Activate permanently and confirm transfer of data:"
 msgstr "Dauerhaft aktivieren und Datenüber&shy;tragung zustimmen:"
+
+#: C:\xampp\htdocs\C5_kickstart\packages\social_share_privacy/helpers/social_share_privacy.php:47
+msgid "http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html"
+msgstr "http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html"
 
 #~ msgid ""
 #~ "In order to use facebook's \"like\" button you need a facebook app-id. "

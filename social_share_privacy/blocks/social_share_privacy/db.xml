@@ -13,5 +13,7 @@
 		</field>
 		<field name="gpStatus" type="X2">
 		</field>
+		<field name="infoURL" type="X2">
+		</field>
 	</table>
 </schema>

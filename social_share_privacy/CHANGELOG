@@ -1,3 +1,10 @@
+1.2 - 2011-12-27
+
+* Added option to set custom info URL
+* Updated socialshareprivacy jQuery Plugin to new version that supports customizale button captions. (Thanks to Tillmann Kuhn)
+* All Graphics are now included in one single sprite. This cuts down network load significally.
+* Loading JS in Footer now.
+
 1.1 - 2011-11-16
 
 * Added a helper SocialSharePrivacyHelper that can add Social Buttons to any template though the 

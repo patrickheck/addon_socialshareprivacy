@@ -1,4 +1,4 @@
-<?php      
+<?php     
 defined('C5_EXECUTE') or die(_("Access Denied."));
 
 /** Adds Social Buttons to a page
@@ -10,7 +10,7 @@ class SocialSharePrivacyPackage extends Package {
 
 	protected $pkgHandle = 'social_share_privacy';
 	protected $appVersionRequired = '5.4.2';
-	protected $pkgVersion = '1.1';
+	protected $pkgVersion = '1.2';
 	
 	private static $_helper = null;
 	
