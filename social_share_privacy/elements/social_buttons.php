@@ -42,8 +42,10 @@ $c = Page::getCurrentPage();
   'info_link' : '<?php  echo $infoURL?>',
   'txt_help' : '<?php  echo t("If you activate these buttons, data will be transferred to Facebook, Twitter or Google in the USA. This data might also be stored there. For further information click the <em>i</em> button.")?>"',
   'settings_perma' : '<?php  echo t("Activate permanently and confirm transfer of data:")?>',
-  'css_path' : '',
+  'css_path' : ''
+  <?php if ($uri != "" ) {?>,
   'uri' : '<?php echo $uri ?>'
+  <?php } ?>
 }); 
       }
     });
