@@ -1,3 +1,8 @@
+1.2.1 - 2012-01-21
+
+* Fixed a bug that prevented the facebook button from counting properly.
+* Merged all CSS in one file.
+
 1.2 - 2011-12-27
 
 * Added option to set custom info URL

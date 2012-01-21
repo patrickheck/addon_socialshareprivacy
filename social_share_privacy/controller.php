@@ -2,15 +2,16 @@
 defined('C5_EXECUTE') or die(_("Access Denied."));
 
 /** Adds Social Buttons to a page
-  * Based on SocialShareProvacy by heise http://www.heise.de/extras/socialshareprivacy/ 
+  * Based on a fork of SocialSharePrivacy by heise https://github.com/patrickheck/socialshareprivacy 
+  * (original code here: http://www.heise.de/extras/socialshareprivacy/ )
   * @author Patrick Heck <patrick@patrickheck.de>
-  * @version 1.1
+  * @version 1.2.1
   */
 class SocialSharePrivacyPackage extends Package {
 
 	protected $pkgHandle = 'social_share_privacy';
 	protected $appVersionRequired = '5.4.2';
-	protected $pkgVersion = '1.2';
+	protected $pkgVersion = '1.2.1';
 	
 	private static $_helper = null;
 	
