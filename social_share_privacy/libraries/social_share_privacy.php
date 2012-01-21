@@ -10,7 +10,6 @@ class SocialSharePrivacy {
 		$html = Loader::helper("html");
 		$v = View::getInstance();
 		$v->addHeaderItem($html->css('socialshareprivacy.css',$this->pkgHandle));
-		$v->addHeaderItem($html->css('social_buttons.css',$this->pkgHandle));
 		$v->addFooterItem($html->javascript('jquery.socialshareprivacy.min.js',$this->pkgHandle));
 	}
 }
