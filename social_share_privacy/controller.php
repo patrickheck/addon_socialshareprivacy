@@ -11,7 +11,7 @@ class SocialSharePrivacyPackage extends Package {
 
 	protected $pkgHandle = 'social_share_privacy';
 	protected $appVersionRequired = '5.4.2';
-	protected $pkgVersion = '1.2.1';
+	protected $pkgVersion = '1.2.2';
 	
 	private static $_helper = null;
 	
