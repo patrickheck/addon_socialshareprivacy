@@ -1,24 +1,35 @@
 <?php     
-defined('C5_EXECUTE') or die(_("Access Denied."));
-
 /** Adds Social Buttons to a page
   * Based on a fork of SocialSharePrivacy by heise https://github.com/patrickheck/socialshareprivacy 
   * (original code here: http://www.heise.de/extras/socialshareprivacy/ )
   * @author Patrick Heck <patrick@patrickheck.de>
-  * @version 1.2.1
+  * @copyright  Copyright (c) 2011-2012 Patrick Heck
+  * @license MIT License
+  * @version 1.2.3
   */
+
+defined('C5_EXECUTE') or die(_("Access Denied."));
+  
 class SocialSharePrivacyPackage extends Package {
 
 	protected $pkgHandle = 'social_share_privacy';
 	protected $appVersionRequired = '5.4.2';
-	protected $pkgVersion = '1.2.2';
+	protected $pkgVersion = '1.2.3';
 	
 	private static $_helper = null;
 	
+	/**
+	  * Gets the description of the package
+	  * @returns string
+	  */
 	public function getPackageDescription() {
 		return t("A social sharing block that protects your privacy");
 	}
 	
+	/**
+	  * Gets the name of the package
+	  * @returns string
+	  */
 	public function getPackageName() {
 		return t("Social Share Privacy");
 	}
@@ -43,7 +54,6 @@ class SocialSharePrivacyPackage extends Package {
 	}
 	
 	public function on_page_view() {
-		// echo "running on_page_view of controller";
 		self::$_helper->on_page_view();
 	}
 }

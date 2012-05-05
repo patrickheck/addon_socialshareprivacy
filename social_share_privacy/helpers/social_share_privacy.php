@@ -1,9 +1,12 @@
-<?php  defined('C5_EXECUTE') or die("Access Denied.");
-
+<?php
 /**
  * Adds a Social Sharing block
  * @author Patrick Heck <patrick@patrickheck.de>
+ * @copyright  Copyright (c) 2011-2012 Patrick Heck
+ * @license MIT License
  */
+defined('C5_EXECUTE') or die("Access Denied.");
+
 class SocialSharePrivacyHelper {
 	
 	private $idPrefix = "social-share-privacy";
@@ -28,11 +31,12 @@ class SocialSharePrivacyHelper {
 	/**
 	 * Renders the Social Buttons
 	 * 
-	 * @param string uri which URI to bookmark
-	 * @param bool $showFacebook 
-	 * @param bool $showTwitter
-	 * @param bool $showGPlus
+	 * @param string $uri Which URI to bookmark
+	 * @param bool $showFacebook If true facebook button is displayed
+	 * @param bool $showTwitter If true twitter button is displayed
+	 * @param bool $showGPlus If true Google+ button is displayed
 	 * @param string $fBAction Caption to be displayed on Facebook button. Currently either "like" or "recommend"
+	 * @param string $infoURL The URI that is displayed if the "i" button is pressed
 	 * @returns bool always returns true
 	 */
 	public function renderSocialButtons($uri="",$showFacebook=true,$showTwitter=true,$showGPlus=true,$fbAction="like",$infoURL="") {
