@@ -3,7 +3,7 @@
   * Based on a fork of SocialSharePrivacy by heise https://github.com/patrickheck/socialshareprivacy 
   * (original code here: http://www.heise.de/extras/socialshareprivacy/ )
   * @author Patrick Heck <patrick@patrickheck.de>
-  * @copyright  Copyright (c) 2011-2012 Patrick Heck
+  * @copyright  Copyright (c) 2011-2013 Patrick Heck
   * @license MIT License
   * @version 1.2.3
   */
