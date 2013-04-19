@@ -5,7 +5,7 @@
   * @author Patrick Heck <patrick@patrickheck.de>
   * @copyright  Copyright (c) 2011-2013 Patrick Heck
   * @license MIT License
-  * @version 1.2.3
+  * @version 1.2.4
   */
 
 defined('C5_EXECUTE') or die(_("Access Denied."));
@@ -14,7 +14,7 @@ class SocialSharePrivacyPackage extends Package {
 
 	protected $pkgHandle = 'social_share_privacy';
 	protected $appVersionRequired = '5.4.2';
-	protected $pkgVersion = '1.2.3';
+	protected $pkgVersion = '1.2.4';
 	
 	private static $_helper = null;
 	
