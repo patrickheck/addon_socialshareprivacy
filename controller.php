@@ -5,7 +5,7 @@
   * @author Patrick Heck <patrick@patrickheck.de>
   * @copyright  Copyright (c) 2011-2013 Patrick Heck
   * @license MIT License
-  * @version 1.2.4
+  * @version 1.3
   */
 
 defined('C5_EXECUTE') or die(_("Access Denied."));
@@ -14,7 +14,7 @@ class SocialSharePrivacyPackage extends Package {
 
 	protected $pkgHandle = 'social_share_privacy';
 	protected $appVersionRequired = '5.4.2';
-	protected $pkgVersion = '1.2.4';
+	protected $pkgVersion = '1.3';
 	
 	private static $_helper = null;
 	
@@ -38,25 +38,23 @@ class SocialSharePrivacyPackage extends Package {
 		$pkg = parent::install();
 		// install block		
 		BlockType::installBlockTypeFromPackage('social_share_privacy', $pkg);
-	}
-	
-	public function on_start() {
-		$req = Request::get();
-		$p = $req->getRequestedPage();
-		if (!$p->isAdminArea()) {
-			self::$_helper = Loader::helper("social_share_privacy", $this->pkgHandle);
-			
-			// Noticed strange behavior with on_page_output event in some cases
-			// This does not work 100% of the cases with that event
-			$file = DIR_PACKAGES . '/' . $this->pkgHandle . '/controller.php';
-			Events::extend('on_page_view', 'SocialSharePrivacyPackage', 'on_page_view', $file);
+		
+		$pkg->saveConfig('FB_STATUS', 'on');
+		$pkg->saveConfig('FB_ACTION', 'like');
+		$pkg->saveConfig('TW_STATUS', 'on');
+		$pkg->saveConfig('GP_STATUS', 'on');
+		$pkg->saveConfig('INFO_CID', '0');
+		
+		Loader::model('single_page');
+		// add page for configuration
+		$p = SinglePage::add('dashboard/social_share_privacy', $pkg);
+		if (is_object($p)) {
+			$p->update(array('cName'=>t("Social Share Privacy"), 'cDescription'=>''));
 		}
-	}
-	
-	public function on_page_view() {
-		self::$_helper->on_page_view();
-	}
-}), 'cDescription'=>''));
+		
+		$p1 = SinglePage::add('dashboard/social_share_privacy/defaults', $pkg);
+		if (is_object($p1)) {
+			$p1->update(array('cName'=>t('Defaults'), 'cDescription'=>''));
 		}
 	}
 
