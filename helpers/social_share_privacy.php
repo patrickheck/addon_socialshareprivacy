@@ -14,9 +14,21 @@ class SocialSharePrivacyHelper {
 	
 	private static $_library = null;
 	
+	private $default_args;
+	
 	public function __construct() {
 		Loader::library("social_share_privacy", $this->pkgHandle);
 		self::$_library = new SocialSharePrivacy;
+		
+		$pkg = Package::getByHandle($this->pkgHandle);
+		
+		$this->default_args = array(
+			"fbStatus" => $pkg->config('FB_STATUS'),
+			"fbAction" => $pkg->config('FB_ACTION'),
+			"twStatus" => $pkg->config('TW_STATUS'),
+			"gpStatus" => $pkg->config('GP_STATUS'),
+			"infoURL"  => $pkg->config('INFO_CID'),
+		);
 	}
 	
 	/**
@@ -39,18 +51,34 @@ class SocialSharePrivacyHelper {
 	 * @param string $infoURL The URI that is displayed if the "i" button is pressed
 	 * @returns bool always returns true
 	 */
-	public function renderSocialButtons($uri="",$showFacebook=true,$showTwitter=true,$showGPlus=true,$fbAction="like",$infoURL="") {
+	public function renderSocialButtons($uri="",$args=NULL,$showTwitter=NULL,$showGPlus=NULL,$fbAction=NULL,$infoURL=NULL) {
 		$target_id = $this->idPrefix . "-" . uniqid();
-		$args["target_id"] = $target_id;
-		$args["fbStatus"] = $showFacebook?"on":"off";
-		$args["twStatus"] = $showTwitter?"on":"off";
-		$args["gpStatus"] = $showGPlus?"on":"off";
-		$args["fbAction"] = $fbAction;
-		$args["uri"] = $uri;
-		if ($infoURL == "") {
-			$infoURL = t("http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html");
+		
+		if ( ! is_array($args)) {
+			
+			// old format was used
+			$showFacebook = $args;
+			$args = array();
+			
+			if ($showFacebook != NULL) {
+				$args["fbStatus"] = $showFacebook?"on":"off";
+			}
+			if ($showTwitter != NULL) {
+				$args["twStatus"] = $showTwitter?"on":"off";
+			}
+			if ($showGPlus != NULL) {
+				$args["gpStatus"] = $showGPlus?"on":"off";
+			}
+			if ($fbAction != NULL) {
+				$args["fbAction"] = $fbAction;
+			}
+			if ($infoURL != NULL) {
+				$args["infoURL"] = $infoURL;
+			}
 		}
-		$args["infoURL"] = $infoURL;
+		$args = array_merge($this->default_args, $args);
+		$args["target_id"] = $target_id;
+		$args["uri"] = $uri;
 		
 		Loader::packageElement('social_buttons', $this->pkgHandle, $args);
 		return true;
