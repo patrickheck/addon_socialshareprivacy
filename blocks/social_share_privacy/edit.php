@@ -7,7 +7,7 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 		<label class="control-label" for="fbStatus"><?php  echo t('Facebook Button')?></label>
 		<div class="controls">
 			<label class="radio">
-			<?php  echo $form->radio('fbStatus', "on", $fbStatus);?> <?php  echo t("On")?>
+			<?php  echo $form->radio('fbStatus', "on", $fbStatus);?> <?php  echo tc("State","On")?>
 			</label>
 		</div>
 		<div class="controls">
@@ -19,7 +19,7 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 			<label class="radio">
 			<?php  echo $form->radio('fbStatus', "", $fbStatus);?> <?php  echo t("Default")?>
 			(<?php if ($sh->default_args["fbStatus"] == "on") {
-				echo t("On");
+				echo tc("State","On");
 			} else {
 				echo t("Off");
 			}?>)
@@ -59,7 +59,7 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 		<label class="control-label" for="fbStatus"><?php  echo t('Twitter Button')?></label>
 		<div class="controls">
 			<label class="radio">
-			<?php  echo $form->radio('twStatus', "on", $twStatus);?> <?php  echo t("On")?>
+			<?php  echo $form->radio('twStatus', "on", $twStatus);?> <?php  echo tc("State","On")?>
 			</label>
 		</div>
 		<div class="controls">
@@ -71,7 +71,7 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 			<label class="radio">
 			<?php  echo $form->radio('twStatus', "", $twStatus);?> <?php  echo t("Default")?>
 			(<?php if ($sh->default_args["twStatus"] == "on") {
-				echo t("On");
+				echo tc("State","On");
 			} else {
 				echo t("Off");
 			}?>)
@@ -86,7 +86,7 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 		<label class="control-label" for="fbStatus"><?php  echo t('Google+ Button')?></label>
 		<div class="controls">
 			<label class="radio">
-			<?php  echo $form->radio('gpStatus', "on", $gpStatus);?> <?php  echo t("On")?>
+			<?php  echo $form->radio('gpStatus', "on", $gpStatus);?> <?php  echo tc("State","On")?>
 			</label>
 		</div>
 		<div class="controls">
@@ -98,7 +98,7 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 			<label class="radio">
 			<?php  echo $form->radio('gpStatus', "", $gpStatus);?> <?php  echo t("Default")?>
 			(<?php if ($sh->default_args["gpStatus"] == "on") {
-				echo t("On");
+				echo tc("State","On");
 			} else {
 				echo t("Off");
 			}?>)
