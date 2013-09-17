@@ -7,16 +7,6 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 		<label class="control-label" for="fbStatus"><?php  echo t('Facebook Button')?></label>
 		<div class="controls">
 			<label class="radio">
-			<?php  echo $form->radio('fbStatus', "on", $fbStatus);?> <?php  echo tc("State","On")?>
-			</label>
-		</div>
-		<div class="controls">
-			<label class="radio">
-			<?php  echo $form->radio('fbStatus', "off", $fbStatus);?> <?php  echo t("Off")?>
-			</label>
-		</div>
-		<div class="controls">
-			<label class="radio">
 			<?php  echo $form->radio('fbStatus', "", $fbStatus);?> <?php  echo t("Default")?>
 			(<?php if ($sh->default_args["fbStatus"] == "on") {
 				echo tc("State","On");
@@ -25,28 +15,38 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 			}?>)
 			</label>
 		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('fbStatus', "on", $fbStatus);?> <?php  echo tc("State","On")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('fbStatus', "off", $fbStatus);?> <?php  echo t("Off")?>
+			</label>
+		</div>
 	</div>
 
-	<div class="control-group">
+	<div class="control-group fb-action hide">
 		<label class="control-label" for="fbStatus"><?php  echo t('Caption')?></label>
-		<div class="controls">
-			<label class="radio">
-			<?php  echo $form->radio('fbAction', "like", $fbAction);?> <?php  echo t("Like")?>
-			</label>
-		</div>
-		<div class="controls">
-			<label class="radio">
-			<?php  echo $form->radio('fbAction', "recommend", $fbAction);?> <?php  echo t("Recommend")?>
-			</label>
-		</div>
 		<div class="controls">
 			<label class="radio">
 			<?php  echo $form->radio('fbAction', "", $fbAction);?> <?php  echo t("Default")?>
 			(<?php if ($sh->default_args["fbAction"] == "like") {
-				echo t("Like");
+				echo t('"Like"');
 			} else {
-				echo t("Recommend");
+				echo t('"Recommend"');
 			}?>)
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('fbAction', "like", $fbAction);?> <?php  echo t('"Like"')?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('fbAction', "recommend", $fbAction);?> <?php  echo t('"Recommend"')?>
 			</label>
 		</div>
 	</div>
@@ -59,22 +59,22 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 		<label class="control-label" for="fbStatus"><?php  echo t('Twitter Button')?></label>
 		<div class="controls">
 			<label class="radio">
-			<?php  echo $form->radio('twStatus', "on", $twStatus);?> <?php  echo tc("State","On")?>
-			</label>
-		</div>
-		<div class="controls">
-			<label class="radio">
-			<?php  echo $form->radio('twStatus', "off", $twStatus);?> <?php  echo t("Off")?>
-			</label>
-		</div>
-		<div class="controls">
-			<label class="radio">
 			<?php  echo $form->radio('twStatus', "", $twStatus);?> <?php  echo t("Default")?>
 			(<?php if ($sh->default_args["twStatus"] == "on") {
 				echo tc("State","On");
 			} else {
 				echo t("Off");
 			}?>)
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('twStatus', "on", $twStatus);?> <?php  echo tc("State","On")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('twStatus', "off", $twStatus);?> <?php  echo t("Off")?>
 			</label>
 		</div>
 	</div>
@@ -86,22 +86,22 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 		<label class="control-label" for="fbStatus"><?php  echo t('Google+ Button')?></label>
 		<div class="controls">
 			<label class="radio">
-			<?php  echo $form->radio('gpStatus', "on", $gpStatus);?> <?php  echo tc("State","On")?>
-			</label>
-		</div>
-		<div class="controls">
-			<label class="radio">
-			<?php  echo $form->radio('gpStatus', "off", $gpStatus);?> <?php  echo t("Off")?>
-			</label>
-		</div>
-		<div class="controls">
-			<label class="radio">
 			<?php  echo $form->radio('gpStatus', "", $gpStatus);?> <?php  echo t("Default")?>
 			(<?php if ($sh->default_args["gpStatus"] == "on") {
 				echo tc("State","On");
 			} else {
 				echo t("Off");
 			}?>)
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('gpStatus', "on", $gpStatus);?> <?php  echo tc("State","On")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('gpStatus', "off", $gpStatus);?> <?php  echo t("Off")?>
 			</label>
 		</div>
 	</div>
@@ -116,8 +116,13 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 			<label class="radio">
 			<?php  echo $form->radio('infoCIDUseDefaults', "1", $infoCID);?> <?php  echo t("Default")?>
 			(<?php
-				$page = Page::getByID($sh->default_args["infoCID"]);
-				echo $page->getCollectionName();?>)
+				if ($sh->default_args["infoCID"] == 0) {
+					echo "<em>".t("No link to info page")."</em>";
+				} else {
+					$page = Page::getByID($sh->default_args["infoCID"]);
+					echo $page->getCollectionName();
+				}
+				?>)
 			</label>
 		</div>
 		<div class="controls">

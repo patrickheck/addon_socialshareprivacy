@@ -4,12 +4,12 @@
 			// use defaults; hide page-selector
 			$(this).closest("form")
 				.find(".page-selector")
-				.hide();
+				.slideUp();
 		} else {
 			// use own settings; show page-selector
 			$(this).closest("form")
 				.find(".page-selector")
-				.show();
+				.slideDown();
 		}
 	});
 	
@@ -25,6 +25,22 @@
 			$(this).find('input:hidden[name="infoCID"]').val(selectedID);
 		}
 	});
+	
+	$('input:radio[name="fbStatus"]').click(function(){
+		if ($(this).val() == "on") {
+			// use defaults; hide page-selector
+			$(this).closest("form")
+				.find(".control-group.fb-action")
+				.slideDown();
+		} else {
+			// use own settings; show page-selector
+			$(this).closest("form")
+				.find(".control-group.fb-action")
+				.slideUp()
+				.find('input[name="fbAction"][value=""]')
+				.attr("checked","checked");
+		}
+	});
 
 	// Set initial state
 	if ($('#ccm-block-form input[name="infoCID"]').val() == "" ) {
@@ -38,3 +54,4 @@
 			.attr('checked', "checked")
 			.click();
 	}
+	$('input:radio[name="fbStatus"]:checked').click();

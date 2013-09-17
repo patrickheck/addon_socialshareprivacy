@@ -81,8 +81,12 @@ class SocialSharePrivacyHelper {
 		$args["uri"] = $uri;
 		
 		if ( ! isset($args["infoURL"])) {
-			$page = Page::getByID($args["infoCID"]);
-			$args["infoURL"] = Loader::helper("navigation")->getCollectionURL($page);
+			if ($args["infoCID"] == 0) {
+				$args["infoURL"] = "";
+			} else {
+				$page = Page::getByID($args["infoCID"]);
+				$args["infoURL"] = Loader::helper("navigation")->getCollectionURL($page);
+			}
 		}
 		
 		Loader::packageElement('social_buttons', $this->pkgHandle, $args);
