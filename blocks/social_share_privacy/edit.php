@@ -1,25 +1,133 @@
 <?php  defined('C5_EXECUTE') or die("Access Denied.");
 $sh = Loader::helper('social_share_privacy','social_share_privacy'); 
 ?>
-<h2><?php echo t("Facebook")?></h2>
-<strong><?php  echo t('Show Facebook Button')?></strong><br />
-<?php  echo $form->radio('fbStatus', "on", $fbStatus);?> <?php  echo t("Yes")?>&nbsp;&nbsp;
-<?php  echo $form->radio('fbStatus', "off", $fbStatus);?> <?php  echo t("No")?><br />
-<br />
-<strong><?php  echo t('Caption')?></strong><br />
-<?php  echo $form->radio('fbAction', "like", $fbAction);?> <?php  echo t("Like")?>&nbsp;&nbsp;
-<?php  echo $form->radio('fbAction', "recommend", $fbAction);?> <?php  echo t("Recommend")?><br />
-<br />
-<h2><?php echo t("Twitter") ?></h2>
-<strong><?php  echo t('Show Twitter Button')?></strong><br />
-<?php  echo $form->radio('twStatus', "on", $twStatus);?> <?php  echo t("Yes")?>&nbsp;&nbsp;
-<?php  echo $form->radio('twStatus', "off", $twStatus);?> <?php  echo t("No")?><br />
-<br />
-<h2><?php echo t("Google+") ?></h2>
-<strong><?php  echo t('Show Google+ Button')?></strong><br />
-<?php  echo $form->radio('gpStatus', "on", $gpStatus);?> <?php  echo t("Yes")?>&nbsp;&nbsp;
-<?php  echo $form->radio('gpStatus', "off", $gpStatus);?> <?php  echo t("No")?><br />
-<br />
-<h2><?php echo t("Info Button URL")?></h2>
-<p><?php echo t("This URL will be visited if you click the <em>i</em> button. Leave empty for default.")?></p>
-<?php  echo $form->text('infoURL', $infoURL);?>
+<fieldset>
+	<legend style="margin-bottom: 0px"><?php echo t("Facebook")?></legend>
+	<div class="control-group">
+		<label class="control-label" for="fbStatus"><?php  echo t('Facebook Button')?></label>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('fbStatus', "on", $fbStatus);?> <?php  echo t("On")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('fbStatus', "off", $fbStatus);?> <?php  echo t("Off")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('fbStatus', "", $fbStatus);?> <?php  echo t("Default")?>
+			(<?php if ($sh->default_args["fbStatus"] == "on") {
+				echo t("On");
+			} else {
+				echo t("Off");
+			}?>)
+			</label>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label class="control-label" for="fbStatus"><?php  echo t('Caption')?></label>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('fbAction', "like", $fbAction);?> <?php  echo t("Like")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('fbAction', "recommend", $fbAction);?> <?php  echo t("Recommend")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('fbAction', "", $fbAction);?> <?php  echo t("Default")?>
+			(<?php if ($sh->default_args["fbAction"] == "like") {
+				echo t("Like");
+			} else {
+				echo t("Recommend");
+			}?>)
+			</label>
+		</div>
+	</div>
+</fieldset>
+
+
+<fieldset>
+	<legend style="margin-bottom: 0px"><?php echo t("Twitter") ?></legend>
+	<div class="control-group">
+		<label class="control-label" for="fbStatus"><?php  echo t('Twitter Button')?></label>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('twStatus', "on", $twStatus);?> <?php  echo t("On")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('twStatus', "off", $twStatus);?> <?php  echo t("Off")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('twStatus', "", $twStatus);?> <?php  echo t("Default")?>
+			(<?php if ($sh->default_args["twStatus"] == "on") {
+				echo t("On");
+			} else {
+				echo t("Off");
+			}?>)
+			</label>
+		</div>
+	</div>
+</fieldset>
+
+<fieldset>
+	<legend style="margin-bottom: 0px"><?php echo t("Google+") ?></legend>
+	<div class="control-group">
+		<label class="control-label" for="fbStatus"><?php  echo t('Google+ Button')?></label>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('gpStatus', "on", $gpStatus);?> <?php  echo t("On")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('gpStatus', "off", $gpStatus);?> <?php  echo t("Off")?>
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('gpStatus', "", $gpStatus);?> <?php  echo t("Default")?>
+			(<?php if ($sh->default_args["gpStatus"] == "on") {
+				echo t("On");
+			} else {
+				echo t("Off");
+			}?>)
+			</label>
+		</div>
+	</div>
+</fieldset>
+
+
+<fieldset>
+<legend style="margin-bottom: 0px"><?php echo t("Info Button Page")?></legend>
+	<div class="control-group">
+		<label for="infoCID" ><?php echo t("This URL will be visited if you click the <em>i</em> button. If none is set the button will be hidden.")?></label>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('infoCIDUseDefaults', "1", $infoCID);?> <?php  echo t("Default")?>
+			(<?php
+				$page = Page::getByID($sh->default_args["infoCID"]);
+				echo $page->getCollectionName();?>)
+			</label>
+		</div>
+		<div class="controls">
+			<label class="radio">
+			<?php  echo $form->radio('infoCIDUseDefaults', "0", $infoCID);?> <?php  echo t("Choose Page")?>
+			</label>
+		</div>
+		<?php echo $form->hidden('infoCID', $infoCID); ?>
+	</div>
+<div class="control-group page-selector">
+<?php  echo Loader::helper('form/page_selector')->selectPage('infoCIDSelected', $infoCID)?>
+</div>
+</fieldset>

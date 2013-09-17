@@ -14,7 +14,7 @@ class SocialSharePrivacyHelper {
 	
 	private static $_library = null;
 	
-	private $default_args;
+	public $default_args;
 	
 	public function __construct() {
 		Loader::library("social_share_privacy", $this->pkgHandle);
@@ -27,7 +27,7 @@ class SocialSharePrivacyHelper {
 			"fbAction" => $pkg->config('FB_ACTION'),
 			"twStatus" => $pkg->config('TW_STATUS'),
 			"gpStatus" => $pkg->config('GP_STATUS'),
-			"infoURL"  => $pkg->config('INFO_CID'),
+			"infoCID"  => $pkg->config('INFO_CID'),
 		);
 	}
 	
@@ -79,6 +79,11 @@ class SocialSharePrivacyHelper {
 		$args = array_merge($this->default_args, $args);
 		$args["target_id"] = $target_id;
 		$args["uri"] = $uri;
+		
+		if ( ! isset($args["infoURL"])) {
+			$page = Page::getByID($args["infoCID"]);
+			$args["infoURL"] = Loader::helper("navigation")->getCollectionURL($page);
+		}
 		
 		Loader::packageElement('social_buttons', $this->pkgHandle, $args);
 		return true;

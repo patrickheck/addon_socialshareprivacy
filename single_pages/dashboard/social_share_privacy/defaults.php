@@ -9,7 +9,7 @@
 <label class="control-label" for="fbStatus"><?php  echo t('Facebook Button')?></label>
 <div class="controls">
 <label class="radio">
-<?php  echo $form->radio('fbStatus', "on", $fbStatus);?> <?php  echo t("On")?>&nbsp;&nbsp;
+<?php  echo $form->radio('fbStatus', "on", $fbStatus);?> <?php  echo t("On")?>
 </label>
 </div>
 <div class="controls">

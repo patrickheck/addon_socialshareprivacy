@@ -5,15 +5,17 @@
 			<key />
 			<unsigned />
 		</field>
-		<field name="fbStatus" type="X2">
+		<field name="fbStatus" type="C">
 		</field>
-		<field name="fbAction" type="X2">
+		<field name="fbAction" type="C">
 		</field>
-		<field name="twStatus" type="X2">
+		<field name="twStatus" type="C">
 		</field>
-		<field name="gpStatus" type="X2">
+		<field name="gpStatus" type="C">
 		</field>
-		<field name="infoURL" type="X2">
+		<field name="infoCID" type="C">
+		</field>
+		<field name="infoURL" type="X">
 		</field>
 	</table>
 </schema>

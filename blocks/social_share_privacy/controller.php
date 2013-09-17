@@ -3,7 +3,6 @@
  * A C5 wrapper wrapper for the jquery socialshareprivacy plugin
  * ( http://www.heise.de/extras/socialshareprivacy/ )
  * @author Patrick Heck <patrick@patrickheck.de>
- * @copyright  Copyright (c) 2011-2012 Patrick Heck
  * @license MIT License
  */
 defined('C5_EXECUTE') or die("Access Denied.");
@@ -18,6 +17,7 @@ defined('C5_EXECUTE') or die("Access Denied.");
 	    protected $btCacheBlockOutputOnPost = true;
 	    protected $btCacheBlockOutputForRegisteredUsers = true;
 	    protected $btCacheBlockOutputLifetime = 300;
+		protected $btWrapperClass = "ccm-ui";
 		
 		/** 
 		 * Used for localization. If we want to localize the name/description we have to include this
@@ -32,5 +32,4 @@ defined('C5_EXECUTE') or die("Access Denied.");
 		public function getBlockTypeName() {
 			return t("Social Share Privacy");
 		}
-		
 	} 
