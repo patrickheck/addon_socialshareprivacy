@@ -15,7 +15,7 @@ class DashboardSocialSharePrivacyDefaultsController extends DashboardBaseControl
 	}
 
 	public function defaults_updated() {
-		$this->set('message', t('Social Sharing Defaults updated.'));
+		$this->set('message', t('Defaults Updated.'));
 		$this->view();
 	}
 

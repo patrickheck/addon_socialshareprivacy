@@ -111,7 +111,7 @@ $sh = Loader::helper('social_share_privacy','social_share_privacy');
 <fieldset>
 <legend style="margin-bottom: 0px"><?php echo t("Info Button Page")?></legend>
 	<div class="control-group">
-		<label for="infoCID" ><?php echo t("This URL will be visited if you click the <em>i</em> button. If none is set the button will be hidden.")?></label>
+		<label for="infoCID" ><?php echo t("This URL will be visited if you click the <em>i</em> button. If none is set the button will not be clickable.")?></label>
 		<div class="controls">
 			<label class="radio">
 			<?php  echo $form->radio('infoCIDUseDefaults', "1", $infoCID);?> <?php  echo t("Default")?>
