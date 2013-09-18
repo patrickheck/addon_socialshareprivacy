@@ -19,16 +19,16 @@
 </div>
 </div>
 
-<div class="control-group">
+<div class="control-group fb-action hide">
 <label class="control-label" for="fbStatus"><?php  echo t('Caption')?></label>
 <div class="controls">
 <label class="radio">
-<?php  echo $form->radio('fbAction', "like", $fbAction);?> <?php  echo t("Like")?>
+<?php  echo $form->radio('fbAction', "like", $fbAction);?> <?php  echo t('"Like"')?>
 </label>
 </div>
 <div class="controls">
 <label class="radio">
-<?php  echo $form->radio('fbAction', "recommend", $fbAction);?> <?php  echo t("Recommend")?>
+<?php  echo $form->radio('fbAction', "recommend", $fbAction);?> <?php  echo t('"Recommend"')?>
 </label>
 </div>
 </div>
@@ -73,7 +73,7 @@
 <fieldset>
 <legend style="margin-bottom: 0px"><?php echo t("Info Button Page")?></legend>
 <div class="control-group">
-<label for="infoCID" ><?php echo t("This URL will be visited if you click the <em>i</em> button. If none is set the button will be hidden.")?></label>
+<label for="infoCID" ><?php echo t("This URL will be visited if you click the <em>i</em> button. If none is set the button will not be clickable.")?></label>
 
 <?php  echo Loader::helper('form/page_selector')->selectPage('infoCID', $infoCID)?>
 
@@ -87,3 +87,22 @@
 </form>
 
 <?php  echo Loader::helper('concrete/dashboard')->getDashboardPaneFooterWrapper();?>
+
+<script>
+	$('input:radio[name="fbStatus"]').click(function(){
+		if ($(this).val() == "on") {
+			// use defaults; hide page-selector
+			$(this).closest("form")
+				.find(".control-group.fb-action")
+				.slideDown();
+		} else {
+			// use own settings; show page-selector
+			$(this).closest("form")
+				.find(".control-group.fb-action")
+				.slideUp()
+				.find('input[name="fbAction"][value=""]')
+				.attr("checked","checked");
+		}
+	});
+	$('input:radio[name="fbStatus"]:checked').click();
+</script>
