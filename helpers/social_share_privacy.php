@@ -15,6 +15,7 @@ class SocialSharePrivacyHelper {
 	private static $_library = null;
 	
 	public $default_args;
+	public $img_dir = "js/socialshareprivacy/socialshareprivacy/images/";
 	
 	public function __construct() {
 		Loader::library("social_share_privacy", $this->pkgHandle);
@@ -104,10 +105,10 @@ class SocialSharePrivacyHelper {
 		$img_loc_name = "dummy_" .$service. "_" . LANGUAGE . ".png";
 		$img_def_name = "dummy_" .$service. ".png";
 		// Check if a localized image exists otherwise fall back to default
-		if ( file_exists( DIR_BASE . '/' . DIRNAME_PACKAGES . '/' . $this->pkgHandle . '/' . DIRNAME_CSS . '/images/' . $img_loc_name ) ) {
-			$dummyImg = DIR_REL . '/' . DIRNAME_PACKAGES . '/' . $this->pkgHandle . '/' . DIRNAME_CSS . '/images/' . $img_loc_name;
-		} elseif ( file_exists( DIR_BASE . '/' . DIRNAME_PACKAGES . '/' . $this->pkgHandle . '/' . DIRNAME_CSS . '/images/' . $img_def_name ) ) {
-			$dummyImg = DIR_REL . '/' . DIRNAME_PACKAGES . '/' . $this->pkgHandle . '/' . DIRNAME_CSS . '/images/' . $img_def_name;
+		if ( file_exists( DIR_BASE . '/' . DIRNAME_PACKAGES . '/' . $this->pkgHandle . '/' . $this->img_dir . $img_loc_name ) ) {
+			$dummyImg = DIR_REL . '/' . DIRNAME_PACKAGES . '/' . $this->pkgHandle . '/' . $this->img_dir . $img_loc_name;
+		} elseif ( file_exists( DIR_BASE . '/' . DIRNAME_PACKAGES . '/' . $this->pkgHandle . '/' . $this->img_dir . $img_def_name ) ) {
+			$dummyImg = DIR_REL . '/' . DIRNAME_PACKAGES . '/' . $this->pkgHandle . '/' . $this->img_dir . $img_def_name;
 		} else {
 			$dummyImg = "";
 		}
