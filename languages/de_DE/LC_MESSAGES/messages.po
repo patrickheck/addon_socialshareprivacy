@@ -1,0 +1,236 @@
+msgid ""
+msgstr "Project-Id-Version: social_share_privacy 1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-18 10:30+0000\n"
+"PO-Revision-Date: 2013-09-18 10:20+0000\n"
+"Last-Translator: Patrick Heck <heckp@gmx.de>\n"
+"Language-Team: Bernd Matzner <bernd@matznermatzner.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Poedit-Basepath: ../../../../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Language: de_DE\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: Germany\n"
+"X-Poedit-KeywordsList: _;t\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: ../../..\n"
+
+#: packages/social_share_privacy/controllers/dashboard/social_share_privacy/defaults.php:18
+msgid "Defaults Updated."
+msgstr "Standardwerte aktualisiert."
+
+#: packages/social_share_privacy/elements/social_buttons.php:16
+msgid "2 clicks for increased privacy: Only after clicking here the button will become active and allow connecting to Facebook. Data will already be transferred upon activation &ndash; see <em>i</em>"
+msgstr "2 Klicks f&uuml;r mehr Datenschutz: Erst wenn Sie hier klicken, wird die Schaltfläche aktiv und Sie k&ouml;nenn Ihre Empfehlung an Facebook senden. Schon beim Aktivieren werden Daten an Dritte &uuml;bertragen &ndash; siehe <em>i</em>"
+
+#: packages/social_share_privacy/elements/social_buttons.php:17
+msgid "not connected to Facebook"
+msgstr "Nicht mit Facebook verbunden"
+
+#: packages/social_share_privacy/elements/social_buttons.php:18
+msgid "connected to Facebook"
+msgstr "Mit Facebook verbunden"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:5
+#: packages/social_share_privacy/elements/social_buttons.php:19
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:7
+msgid "Facebook"
+msgstr "Facebook"
+
+#: packages/social_share_privacy/elements/social_buttons.php:22
+msgid "Recommend"
+msgstr "Empfehlen"
+
+#: packages/social_share_privacy/elements/social_buttons.php:22
+msgid "Like"
+msgstr "Gefällt mir"
+
+#: packages/social_share_privacy/elements/social_buttons.php:26
+msgid "2 clicks for increased privacy: Only after clicking here the button will become active and allow connecting to Twitter. Data will already be transferred upon activation &ndash; see <em>i</em>"
+msgstr "2 Klicks f&uuml;r mehr Datenschutz: Erst wenn Sie hier klicken, wird die Schaltfläche aktiv und Sie k&ouml;nenn Ihre Empfehlung an Twitter senden. Schon beim Aktivieren werden Daten an Dritte &uuml;bertragen &ndash; siehe <em>i</em>"
+
+#: packages/social_share_privacy/elements/social_buttons.php:27
+msgid "not connected to twitter"
+msgstr "Nicht mit Twitter verbunden"
+
+#: packages/social_share_privacy/elements/social_buttons.php:28
+msgid "connected to twitter"
+msgstr "Mit Twitter verbunden"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:57
+#: packages/social_share_privacy/elements/social_buttons.php:29
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:39
+msgid "Twitter"
+msgstr "Twitter"
+
+#: packages/social_share_privacy/elements/social_buttons.php:31
+msgid "Tweet"
+msgstr "Twittern"
+
+#: packages/social_share_privacy/elements/social_buttons.php:35
+msgid "2 clicks for increased privacy: Only after clicking here the button will become active and allow connecting to Google+. Data will already be transferred upon activation &ndash; see <em>i</em>"
+msgstr "2 Klicks f&uuml;r mehr Datenschutz: Erst wenn Sie hier klicken, wird die Schaltfläche aktiv und Sie k&ouml;nenn Ihre Empfehlung an Google+ senden. Schon beim Aktivieren werden Daten an Dritte &uuml;bertragen &ndash; siehe <em>i</em>"
+
+#: packages/social_share_privacy/elements/social_buttons.php:36
+msgid "not connected to google+"
+msgstr "Nicht mit Google+ verbunden"
+
+#: packages/social_share_privacy/elements/social_buttons.php:37
+msgid "connected to google+"
+msgstr "Mit Google+ verbunden"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:84
+#: packages/social_share_privacy/elements/social_buttons.php:38
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:56
+msgid "Google+"
+msgstr "Google+"
+
+#: packages/social_share_privacy/elements/social_buttons.php:43
+msgid "If you activate these buttons, data will be transferred to Facebook, Twitter or Google in the USA. This data might also be stored there."
+msgstr "Wenn Sie diese Schaltflächen durch einen Klick aktivieren, werden Informationen an Facebook, Twitter oder Google in die USA &uuml;bertragen und unter Umst&auml;nden auch dort gespeichert."
+
+#: packages/social_share_privacy/elements/social_buttons.php:44
+msgid "Activate permanently and confirm transfer of data:"
+msgstr "Dauerhaft aktivieren und der Übertragung von Daten zustimmen:"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/controller.php:26
+#: packages/social_share_privacy/controller.php:26
+msgid "A social sharing block that protects your privacy"
+msgstr "Ein Block für soziale Netzwerke, der Ihre Privatsphäre schützt"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/controller.php:33
+#: packages/social_share_privacy/controller.php:34
+#: packages/social_share_privacy/controller.php:52
+#: packages/social_share_privacy/controller.php:85
+msgid "Social Share Privacy"
+msgstr "Social Share Privacy"
+
+#: packages/social_share_privacy/controller.php:57
+#: packages/social_share_privacy/controller.php:90
+msgid "Defaults"
+msgstr "Stardardwerte"
+
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:3
+msgid "Social Share Privacy Defaults"
+msgstr "Social Share Privacy Stardardwerte"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:7
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:9
+msgid "Facebook Button"
+msgstr "Facebook Button"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:12
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:20
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:64
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:72
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:91
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:99
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:12
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:44
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:61
+msgctxt "State"
+msgid "On"
+msgstr "An"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:14
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:25
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:66
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:77
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:93
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:104
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:17
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:49
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:66
+msgid "Off"
+msgstr "Aus"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:31
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:23
+msgid "Caption"
+msgstr "Beschriftung"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:36
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:44
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:26
+msgid "\"Like\""
+msgstr "&bdquo;Gefällt mir&ldquo;"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:38
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:49
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:31
+msgid "\"Recommend\""
+msgstr "&bdquo;Empfehlen&ldquo;"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:59
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:41
+msgid "Twitter Button"
+msgstr "Twitter Button"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:86
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:58
+msgid "Google+ Button"
+msgstr "Google+ Button"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:112
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:74
+msgid "Info Button Page"
+msgstr "Info Button Seite"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:114
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:76
+msgid "This URL will be visited if you click the <em>i</em> button. If none is set the button will not be clickable."
+msgstr "Diese Seite wird über die <em>i</em>-Schaltfläche aufgerufen. Wenn keine gesetzt ist, ist die Schaltfläche nicht klickbar."
+
+#: packages/social_share_privacy/single_pages/dashboard/social_share_privacy/defaults.php:85
+msgid "Save"
+msgstr "Speichern"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:10
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:34
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:62
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:89
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:117
+msgid "Default"
+msgstr "Standardwert"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:120
+msgid "No link to info page"
+msgstr "Keine Info Seite"
+
+#: packages/social_share_privacy/blocks/social_share_privacy/edit.php:130
+msgid "Choose Page"
+msgstr "Seite auswählen"
+
+#~ msgid "Access Denied."
+#~ msgstr "Zugriff verweigert"
+
+#~ msgid "Show Facebook Button"
+#~ msgstr "Facebook-Schaltfläche anzeigen"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nein"
+
+#~ msgid "Show Twitter Button"
+#~ msgstr "Twitter-Schaltfläche anzeigen"
+
+#~ msgid "Show Google+ Button"
+#~ msgstr "Google+ Schaltfläche anzeigen"
+
+#~ msgid "Info Button URL"
+#~ msgstr "URL der Info-Schaltfläche"
+
+#~ msgid "This URL will be visited if you click the <em>i</em> button. Leave empty for default."
+#~ msgstr "Diese URL wird aufgerufen, wenn Sie die <em>i</em>-Schaltfläche drücken. Leer lassen, um die Voreinstellung zu verwenden"
+
+#~ msgid "If you activate these buttons, data will be transferred to Facebook, Twitter or Google in the USA. This data might also be stored there. For further information click the <em>i</em> button."
+#~ msgstr "Wenn Sie diese Schaltflächen durch einen Klick aktivieren, werden Informationen an Facebook, Twitter oder Google in die USA &uuml;bertragen und unter Umst&auml;nden auch dort gespeichert. N&auml;heres erfahren Sie durch einen Klick auf das <em>i</em>."
+
+#~ msgid "http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html"
+#~ msgstr "http://www.heise.de/ct/artikel/2-Klicks-fuer-mehr-Datenschutz-1333879.html"
