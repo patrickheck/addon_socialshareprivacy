@@ -2,7 +2,7 @@
 /**
  * Adds a Social Sharing block
  * @author Patrick Heck <patrick@patrickheck.de>
- * @copyright  Copyright (c) 2011-2012 Patrick Heck
+ * @copyright  Copyright (c) 2011-2013 Patrick Heck
  * @license MIT License
  */
 defined('C5_EXECUTE') or die("Access Denied.");
