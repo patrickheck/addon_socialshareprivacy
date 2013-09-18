@@ -1,9 +1,14 @@
 #!/bin/sh
+# this script builds a combined css file with code from the jquery plugin and c5 specific additions
 
+# adjust paths to images
 sed "s#\(url\s*(\s*['\"]\?\)\s*\([^/]\)#\1../js/socialshareprivacy/socialshareprivacy/\2#" < js/socialshareprivacy/socialshareprivacy/socialshareprivacy.css > css/_temp.css
 
+# combine css files
 cat css/_temp.css css/ssp_c5.css > css/ssp_combined.css
 
+# remove temporary file
 rm css/_temp.css
 
+# add new combined file to git index
 git add css/ssp_combined.css
