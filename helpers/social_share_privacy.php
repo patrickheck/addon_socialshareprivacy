@@ -64,19 +64,19 @@ class SocialSharePrivacyHelper {
 			$showFacebook = $args;
 			$args = array();
 			
-			if ($showFacebook != NULL) {
+			if ($showFacebook !== NULL) {
 				$args["fbStatus"] = $showFacebook?"on":"off";
 			}
-			if ($showTwitter != NULL) {
+			if ($showTwitter !== NULL) {
 				$args["twStatus"] = $showTwitter?"on":"off";
 			}
-			if ($showGPlus != NULL) {
+			if ($showGPlus !== NULL) {
 				$args["gpStatus"] = $showGPlus?"on":"off";
 			}
-			if ($fbAction != NULL) {
+			if ($fbAction !== NULL) {
 				$args["fbAction"] = $fbAction;
 			}
-			if ($infoURL != NULL) {
+			if ($infoURL !== NULL) {
 				$args["infoURL"] = $infoURL;
 			}
 		}
