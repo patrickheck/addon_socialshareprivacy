@@ -4,6 +4,7 @@
 * Added alternative syntax to helper
 * Added the possibility to omit the info link
 * Changed info url input form regular input to page selector
+* Requires concrete5 5.6.1
 
 1.2.4 - 2013-04-19
 
