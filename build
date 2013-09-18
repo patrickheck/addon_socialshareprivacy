@@ -1,0 +1,9 @@
+#!/bin/sh
+
+sed "s#\(url\s*(\s*['\"]\?\)\s*\([^/]\)#\1../js/socialshareprivacy/socialshareprivacy/\2#" < js/socialshareprivacy/socialshareprivacy/socialshareprivacy.css > css/_temp.css
+
+cat css/_temp.css css/ssp_c5.css > css/ssp_combined.css
+
+rm css/_temp.css
+
+git add css/ssp_combined.css

@@ -18,7 +18,7 @@ class SocialSharePrivacy {
 	public function on_page_view() {
 		$html = Loader::helper("html");
 		$v = View::getInstance();
-		$v->addHeaderItem($html->css('socialshareprivacy.css',$this->pkgHandle));
-		$v->addFooterItem($html->javascript('jquery.socialshareprivacy.min.js',$this->pkgHandle));
+		$v->addHeaderItem($html->css('ssp_combined.css',$this->pkgHandle));
+		$v->addFooterItem($html->javascript('socialshareprivacy/jquery.socialshareprivacy.min.js',$this->pkgHandle));
 	}
 }
