@@ -13,7 +13,7 @@ defined('C5_EXECUTE') or die(_("Access Denied."));
 class SocialSharePrivacyPackage extends Package {
 
 	protected $pkgHandle = 'social_share_privacy';
-	protected $appVersionRequired = '5.4.2';
+	protected $appVersionRequired = '5.6.1';
 	protected $pkgVersion = '1.3';
 	
 	private static $_helper = null;
