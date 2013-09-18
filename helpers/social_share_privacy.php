@@ -45,7 +45,10 @@ class SocialSharePrivacyHelper {
 	 * Renders the Social Buttons
 	 * 
 	 * @param string $uri Which URI to bookmark
-	 * @param bool $showFacebook If true facebook button is displayed
+	 * @param mixed $args If true facebook button is displayed
+	 * if parameter is an array it accepts the following keys:
+	 * fbStatus, twStatus, gpStatus, fbAction, infoURL, infoCID
+	 * if infoURL is set it will have priority over infoCID
 	 * @param bool $showTwitter If true twitter button is displayed
 	 * @param bool $showGPlus If true Google+ button is displayed
 	 * @param string $fBAction Caption to be displayed on Facebook button. Currently either "like" or "recommend"
