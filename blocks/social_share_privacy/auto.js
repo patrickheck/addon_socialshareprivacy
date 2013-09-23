@@ -43,7 +43,7 @@
 	});
 
 	// Set initial state
-	if ($('#ccm-block-form input[name="infoCID"]').val() == "" ) {
+	if ($('#ccm-block-form input[name="infoCID"]').val() === "" ) {
 		// use defaults
 		$('#ccm-block-form input:radio[name="infoCIDUseDefaults"][value="1"]')
 			.attr('checked', "checked")
