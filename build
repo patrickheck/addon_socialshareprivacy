@@ -1,9 +1,11 @@
 #!/bin/sh
 # this script builds a combined css file with code from the jquery plugin and c5 specific additions
 
+echo "adjusting paths in css"
 # adjust paths to images
 sed "s#\(url\s*(\s*['\"]\?\)\s*\([^/]\)#\1../js/socialshareprivacy/socialshareprivacy/\2#" < js/socialshareprivacy/socialshareprivacy/socialshareprivacy.css > css/_temp.css
 
+echo "concatenating css"
 # combine css files
 cat css/_temp.css css/ssp_c5.css > css/ssp_combined.css
 
@@ -12,3 +14,24 @@ rm css/_temp.css
 
 # add new combined file to git index
 git add css/ssp_combined.css
+
+echo "update mo files"
+# update mo files
+# msgfmt -o languages/de_DE/LC_MESSAGES/messages.mo languages/de_DE/LC_MESSAGES/messages.po
+
+textdomain="messages"
+localedir=`pwd`"/languages/"
+
+for file in `find $localedir -type f -name "*.po"`; do 
+	cd $localedir
+	echo "cd " "$( readlink -f "$( dirname "$file" )" )" && \
+	cd "$( readlink -f "$( dirname "$file" )" )"
+
+	echo "msgfmt -o $textdomain.mo `basename $file`" && \
+	msgfmt -o $textdomain.mo `basename $file`
+	#TODO: for existing .mo - revise only older than .po
+    git add $textdomain.mo
+done
+
+echo "done."
+
