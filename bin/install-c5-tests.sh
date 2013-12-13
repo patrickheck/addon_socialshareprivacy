@@ -45,10 +45,10 @@ install_c5() {
 	# Modify Starting Point to make it install this package
 	sed -i.bak "s/<\/concrete5-cif>/\<packages\>\<package handle=\"${PACKAGE_NAME}\"\/\>\<\/packages\>\<\/concrete5-cif\>/g" "${C5_CORE_DIR}web/concrete/config/install/packages/standard/content.xml"
 	
-	mysql -u ${DB_USER} -p${DB_PASS} -e "DROP DATABASE IF EXISTS \`${DB_NAME}\`;"
-	mysql -u ${DB_USER} -p${DB_PASS} -e "CREATE DATABASE \`${DB_NAME}\`;"
+	mysql -u ${DB_USER} --password="${DB_PASS}" -e "DROP DATABASE IF EXISTS \`${DB_NAME}\`;"
+	mysql -u ${DB_USER} --password="${DB_PASS}" -e "CREATE DATABASE \`${DB_NAME}\`;"
 	
-    ${C5_CORE_DIR}cli/install-concrete5.php --db-server=${DB_HOST} --db-username=${DB_USER} --db-password=${DB_PASS} --db-database=${DB_NAME} --admin-email=webmaster@example.org --admin-password=password --target=${C5_CORE_DIR}web --starting-point=standard
+    ${C5_CORE_DIR}cli/install-concrete5.php --db-server=${DB_HOST} --db-username=${DB_USER} --db-password="${DB_PASS}" --db-database=${DB_NAME} --admin-email=webmaster@example.org --admin-password=password --target=${C5_CORE_DIR}web --starting-point=standard
 }
 
 install_c5
