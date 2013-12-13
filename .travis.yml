@@ -1,0 +1,19 @@
+language: php
+
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+
+env:
+    - C5_VERSION=latest
+  
+before_script:
+  - echo 'short_open_tag = On' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - bash bin/install-c5-tests.sh concrete5_tests travis '' localhost $C5_VERSION
+  - cd /tmp/concrete5/tests
+
+script: phpunit
+
+notifications:
+  email: false
