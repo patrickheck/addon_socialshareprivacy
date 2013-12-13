@@ -23,17 +23,15 @@ class SocialSharePrivacyPackageTest extends PHPUnit_Framework_TestCase {
     protected function tearDown()
     {
     }
-    
-    public function testInstall() {
-    	$this->assertEquals(true,$this->object->testForInstall($this->object->getPackageHandle(),true));
-    	$this->assertEquals(null,$this->object->install());
-    	$this->assertCount(1,$this->object->testForInstall($this->object->getPackageHandle(),true));
-    }
-    
+
     public function testUninstall() {
     	// echo $this->object->getPackageItems();
+		$this->assertCount(1,$this->object->testForInstall($this->object->getPackageHandle(),true));
     	$pkg = Package::getByHandle($this->object->getPackageHandle());
     	$this->assertEquals(null,$pkg->uninstall());
     	$this->assertEquals(true,$this->object->testForInstall($this->object->getPackageHandle(),true));
+		// now reinstall
+		$this->assertEquals(null,$this->object->install());
+    	$this->assertCount(1,$this->object->testForInstall($this->object->getPackageHandle(),true));
     }
 }
