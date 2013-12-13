@@ -13,7 +13,8 @@ C5_VERSION=${5-master}
 
 
 C5_CORE_DIR="/tmp/concrete5/"
-PACKAGE_NAME=$(readlink -f "$(dirname %0)" | sed 's,^\(.*/\)\?\([^/]*\),\2,')
+# PACKAGE_NAME=$(readlink -f "$(dirname %0)" | sed 's,^\(.*/\)\?\([^/]*\),\2,')
+PACKAGE_NAME="social_share_privacy"
 echo "Package Name is: "$PACKAGE_NAME
 
 set -ex
