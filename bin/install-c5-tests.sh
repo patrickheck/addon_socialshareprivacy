@@ -23,9 +23,9 @@ rm -rf $C5_CORE_DIR
 mkdir -p $C5_CORE_DIR
 
 if [ $C5_VERSION == 'latest' ]; then 
-    local ARCHIVE_NAME='master'
+    ARCHIVE_NAME='master'
 else
-    local ARCHIVE_NAME="$C5_VERSION"
+    ARCHIVE_NAME="$C5_VERSION"
 fi
 
 wget -nv -O /tmp/concrete5.tar.gz https://github.com/concrete5/concrete5/archive/${ARCHIVE_NAME}.tar.gz
