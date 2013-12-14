@@ -13,8 +13,12 @@ C5_VERSION=${5-master}
 
 
 C5_CORE_DIR="/tmp/concrete5/"
-# PACKAGE_NAME=$(readlink -f "$(dirname %0)" | sed 's,^\(.*/\)\?\([^/]*\),\2,')
-PACKAGE_NAME="social_share_privacy"
+# extract package name from controller
+PACKAGE_NAME=$(sed -n 's/^.*\$pkgHandle\s\{1,\}=\s\{1,\}["'\'']\([^'\''"]*\)["'\''].*$/\1/p' <`dirname $0`/../controller.php)
+if [ -z "$PACKAGE_NAME" ]; then
+    echo "Error: Package name could not be detected automatically"
+    exit 1
+fi
 echo "Package Name is: "$PACKAGE_NAME
 
 set -ex
