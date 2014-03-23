@@ -1,5 +1,7 @@
 nohup.out
 *.log
+node_modules
+build
 
 # Windows image file caches
 Thumbs.db
