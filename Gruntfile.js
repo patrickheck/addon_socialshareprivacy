@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 		  separator: ''
 		},
 		dist: {
-		  src: ['css/ssp_c5.css', 'js/socialshareprivacy/socialshareprivacy/socialshareprivacy.css'],
+		  src: ['js/socialshareprivacy/socialshareprivacy/socialshareprivacy.css', 'css/ssp_c5.css'],
 		  dest: 'css/ssp_combined.css'
 		}
 	},

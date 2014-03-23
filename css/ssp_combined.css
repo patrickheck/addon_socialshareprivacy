@@ -1,14 +1,4 @@
-/* Concrete5 specific additions */
-
-/* prevent "i" button from floating above everything when in edit mode */
-.social-share-privacy.editmode .social_share_privacy_area li.settings_info .settings_info_menu {
-	z-index:0 !important;
-}
-/* adjust z-indexes for the "i" and popup help elements in order to not float above the top edit bar
-   it should be below 100 to not interface with c5 elements */
-.social_share_privacy_area li.settings_info .settings_info_menu, .social_share_privacy_area li.help_info .info, .social_share_privacy_area li .help_info.icon .info {
-	z-index:3 !important;
-}.social_share_privacy_area {
+.social_share_privacy_area {
     clear: both;
     margin: 20px 0 !important;
 	list-style-type: none;
@@ -295,4 +285,14 @@
 .social_share_privacy_area li.settings_info .settings_info_menu form fieldset label.checked {
 	color: #090;
 }
-/* Settings/Info end */
+/* Settings/Info end *//* Concrete5 specific additions */
+
+/* prevent "i" button from floating above everything when in edit mode */
+.social-share-privacy.editmode .social_share_privacy_area li.settings_info .settings_info_menu {
+	z-index:0 !important;
+}
+/* adjust z-indexes for the "i" and popup help elements in order to not float above the top edit bar
+   it should be below 100 to not interface with c5 elements */
+.social_share_privacy_area li.settings_info .settings_info_menu, .social_share_privacy_area li.help_info .info, .social_share_privacy_area li .help_info.icon .info {
+	z-index:3 !important;
+}
