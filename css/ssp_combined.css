@@ -285,7 +285,17 @@
 .social_share_privacy_area li.settings_info .settings_info_menu form fieldset label.checked {
 	color: #090;
 }
-/* Settings/Info end *//* Concrete5 specific additions */
+/* Settings/Info end */
+
+/* Set box-sizing to "content-box" for all children
+This fixes problems with frameworks like Bootstrap3 which set "border-box" globally by default */
+.social_share_privacy_area * {
+      -ms-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+/* Concrete5 specific additions */
 
 /* prevent "i" button from floating above everything when in edit mode */
 .social-share-privacy.editmode .social_share_privacy_area li.settings_info .settings_info_menu {
